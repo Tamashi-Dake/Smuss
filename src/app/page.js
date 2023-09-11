@@ -2,9 +2,11 @@
 import Head from "next/head";
 import Header from "./components/Header";
 import TrackGrid from "./components/TrackGrid";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+
 
 export default function Home() {
+
   const [selectHowl, setSelectHowl] = useState(null);
   // Khai báo state selectHowl và setSelectHowl với giá trị ban đầu là null
   const [playing, setPlaying] = useState(false);
