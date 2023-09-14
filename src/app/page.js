@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "./components/Header";
 import TrackGrid from "./components/TrackGrid";
 import { useState,useEffect } from "react";
-
+require('dotenv').config();
 
 export default function Home() {
 

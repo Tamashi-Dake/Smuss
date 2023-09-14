@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 async function connectMongo(){
     try {
         // dotenv dell hoạt động
-        await mongoose.connect(process.env.MONGO_URI)
+        await mongoose.connect(process.env.MONGODB_URI)
         console.log('CONNNECCTTTTEEED')
     } catch (error) {
         console.log('Error')
