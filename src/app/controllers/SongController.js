@@ -1,25 +1,29 @@
 const Song = require("../models/songs");
 // const { mongooseToObject } = require('../../util/mongoose');
 
-// const { clientPromise } = require("../../../lib/mongodb")
+// const { clientPromise } = require("../../../mongodb")
 
 class SongController {
   // [GET] /songs/:slug
-  show(req, res, next) {
+   async show(req, res, next) {
     Song.find({})
       .then((songs) => res.json(songs))
-      .catch((err) => next(err));
-    // const client = await clientPromise;
-    // const db = client.db("testDB");
+      .catch(next);
+  //   try {
+  //     const client = await clientPromise;
+  //     const db = client.db("testDB");
 
-    // const songs = await db
-    //     .collection("songs")
-    //     .find({})
-    //     .sort({ metacritic: -1 })
-    //     .limit(10)
-    //     .toArray();
+  //     const movies = await db
+  //         .collection("songs")
+  //         .find({})
+  //         .sort({ metacritic: -1 })
+  //         .limit(10)
+  //         .toArray();
 
-    // res.json(songs);
+  //     res.json(movies);
+  // } catch (e) {
+  //     console.error(e);
+  // }
     // slug: req.params.slug
     // (song) =>
     // res.render('songs/show', {

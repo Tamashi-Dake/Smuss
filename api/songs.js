@@ -1,4 +1,4 @@
-const { clientPromise } = require("../lib/mongodb")
+const { clientPromise } = require("../mongodb")
 
 export default testAPI = async (req, res) => {
     try {

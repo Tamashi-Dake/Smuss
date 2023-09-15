@@ -1,12 +1,13 @@
 const { MongoClient } = require('mongodb');
+
 // const path = require('path')
-require('dotenv').config({ path: '../.env.local' });
-if (!process.env.MONGODB_URI) {
+const uri = "mongodb+srv://dake148:Zq3JmZMIk1wfwjk6@cluster0.1vd3wy7.mongodb.net/Cluster0";
+const options = {};
+// console.log(uri)
+if (!uri) {
   throw new Error('Invalid/Missing environment variable: "MONGODB_URI"');
 }
 
-const uri = process.env.MONGODB_URI;
-const options = {};
 
 let client;
 let clientPromise;
